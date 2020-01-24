@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:behaviors="clr-namespace:App_RP.Behaviors"
+             xmlns:videoplayer="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer"
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
+             mc:Ignorable="d"
+             x:Class="App_RP.Views.ItemsPage"
+             Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+
+    <!--<ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="MostRecentStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsSemiBold}" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="SubTitleStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsSemiBold}" />
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="Margin" Value="12, 0" />
+            </Style>
+
+            <Style x:Key="DateStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="Margin" Value="12, 12, 0, 0" />
+            </Style>
+
+            <Style x:Key="PostTitleStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsSemiBold}" />
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="Margin" Value="12, 12, 12, 6" />
+            </Style>
+
+            <Style x:Key="PostDateStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}" />
+                <Setter Property="FontSize" Value="8" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="Margin" Value="12, 0, 12, 12" />
+            </Style>
+
+            <Style x:Key="FilterStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}" />
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="TextColor" Value="#606467" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Margin" Value="0, 18" />
+            </Style>
+
+            <Style x:Key="SelectedFilterStyle" TargetType="Label" BasedOn="{StaticResource FilterStyle}">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+            </Style>
+
+            <DataTemplate x:Key="PostItemTemplate">
+                <pancakeview:PancakeView
+                    BackgroundColor="{StaticResource WhiteColor}"
+                    CornerRadius="6">
+                    <Grid
+                        RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image 
+                            Grid.Row="0"
+                            Aspect="AspectFill"
+                            Source="{Binding Image}"/>
+                        <Label 
+                            Grid.Row="1" 
+                            Text="{Binding SubTitle}"
+                            Style="{StaticResource PostTitleStyle}"/>
+                        <Label 
+                            Grid.Row="2"
+                            Text="{Binding Date}"
+                            Style="{StaticResource PostDateStyle}"/>
+                        <Label />
+                    </Grid>
+                </pancakeview:PancakeView>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Shell.TitleView>
+        <Grid>
+            <Label 
+                Text="MOST RECENT"
+                Style="{StaticResource MostRecentStyle}"/>
+        </Grid>
+    </Shell.TitleView>
+    <Grid>
+        --><!-- BACKGROUND VIDEO --><!--
+        <videoplayer:VideoPlayer
+            AutoPlay="True"
+            DisplayControls="False"
+            Repeat="True"
+            Volume="0"
+            FillMode="Resize"
+            Source="{Binding CurrentPost.Video}"/>
+        --><!-- BACKGROUND GRADIENT --><!--
+        <pancakeview:PancakeView
+            BackgroundGradientAngle="180"
+            BackgroundGradientStartColor="{StaticResource BlackColor}"
+            BackgroundGradientEndColor="Transparent"/>
+        <Grid>
+            <Grid.Behaviors>
+                <xamanimation:EntranceTransition 
+                    Duration="1000" />
+            </Grid.Behaviors>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            --><!-- HEADER INFO --><!--
+            <Grid
+                Grid.Row="0" 
+                HorizontalOptions="Start"
+                WidthRequest="250"
+                Margin="12, 24, 12, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label 
+                    Grid.Row="0"
+                    Text="{Binding CurrentPost.Title}"
+                    Style="{StaticResource SubTitleStyle}"/>
+                <BoxView 
+                    Grid.Row="1"
+                    Opacity="0.5"
+                    HorizontalOptions="Start"
+                    HeightRequest="2"
+                    WidthRequest="60"
+                    Color="{StaticResource WhiteColor}"
+                    Margin="12, 0"/>
+            </Grid>
+            --><!-- DATE --><!--
+            <Grid
+                Grid.Row="1">
+                <Grid.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="12, 0, 12, 0" />
+                        <On Platform="Android" Value="12, 0, 12, 24" />
+                    </OnPlatform>
+                </Grid.Margin>
+                <Label 
+                    Text="{Binding CurrentPost.Date}"
+                    Style="{StaticResource DateStyle}"/>
+            </Grid>
+            --><!-- CAROUSEL POSTS --><!--
+            <CarouselView 
+                Grid.Row="2"
+                ItemsSource="{Binding Posts}"
+                ItemTemplate="{StaticResource PostItemTemplate}"
+                VerticalOptions="End">
+                <CarouselView.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="12, 48, 0, 0" />
+                        <On Platform="Android" Value="12, 24, 0, 0" />
+                    </OnPlatform>
+                </CarouselView.Margin>
+                <CarouselView.ItemsLayout>
+                    <ListItemsLayout
+                        Orientation="Horizontal"
+                        SnapPointsType="Mandatory"
+                        SnapPointsAlignment="Start"
+                        ItemSpacing="12"/>
+                </CarouselView.ItemsLayout>
+            </CarouselView>
+            --><!-- FILTER --><!--
+            <Grid
+                Grid.Row="3"
+                Margin="60, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Text="ALL"
+                    Style="{StaticResource SelectedFilterStyle}"/>
+                <Label 
+                    Grid.Column="1"
+                    Text="MENS"
+                    Style="{StaticResource FilterStyle}"/>
+                <Label 
+                    Grid.Column="2"
+                    Text="WOMENS"
+                    Style="{StaticResource FilterStyle}"/>
+            </Grid>
+        </Grid>
+    </Grid>-->
+
+
+
+
+
+    <!--<StackLayout>
+        <CarouselView  BackgroundColor="Aqua">
+
+        </CarouselView>
+        <CarouselView >
+            <CarouselView.EmptyView>
+                <StackLayout>
+                    <Label Text="No items."
+                    FontAttributes="Bold" />
+                </StackLayout>
+            </CarouselView.EmptyView>
+        </CarouselView>
+        --><!--<Grid x:Name="page" Padding="0,60">
+        <Label x:Name="debug" HorizontalOptions="Center" TextColor="#fff" />
+        <CarouselView x:Name="carousel"  Scrolled="Handle_Scrolled" ItemsSource="{Binding Items}"
+            VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <CarouselView.Behaviors>
+                <behaviors:CarouselViewParallaxBehavior ParallaxOffset="100"/>
+            </CarouselView.Behaviors>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="32,64,32,64">
+                        <custom:PancakeView CornerRadius="32" BackgroundColor="#FFFFFF">
+                            <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+                                <custom:PancakeView VerticalOptions="FillAndExpand" HeightRequest="400" CornerRadius="32"
+                                                    BackgroundGradientStartColor="{Binding StartColor}"
+                                                    BackgroundGradientEndColor="{Binding EndColor}">
+                                    <Grid>
+                                        <Label Text="{Binding Title}" FontFamily="{StaticResource font_extrabold}" HorizontalOptions="Center" TextColor="#55000000" VerticalOptions="End" Margin="0,0,0,24" FontSize="140" FontAttributes="Bold" LineBreakMode="NoWrap" />
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image TranslationX="{Binding Position}" Opacity="0.7" Source="logo.png" HeightRequest="32" Margin="24,24,24,0" />
+                                                <Label FontFamily="{StaticResource font_regular}" TranslationX="{Binding Position}" HorizontalOptions="EndAndExpand" Text="{Binding Price, StringFormat='$ {0}'}" TextColor="#FFFFFF" Margin="24,24,24,0" FontSize="18" LineBreakMode="NoWrap" />
+                                            </StackLayout>
+                                            <Label FontFamily="{StaticResource font_bold}" TranslationX="{Binding Position}" Text="{Binding Name}" TextColor="#FFFFFF" Margin="24,24,24,0" FontSize="16" FontAttributes="Bold" LineBreakMode="NoWrap" />
+                                            <Label FontFamily="{StaticResource font_regular}" TranslationX="{Binding Position}" Text="{Binding Description}" TextColor="#FFFFFF" Margin="24,8,24,24" FontSize="12" LineBreakMode="WordWrap" />
+                                        </StackLayout>
+                                    </Grid>
+                                </custom:PancakeView>
+                                <StackLayout BackgroundColor="#FFFFFF" VerticalOptions="FillAndExpand" Margin="0,-32,0,32">
+                                    <StackLayout VerticalOptions="CenterAndExpand" Margin="0,32,0,0">
+                                        <Button BackgroundColor="#FFFFFF" TranslationX="{Binding Position}" FontFamily="{StaticResource font_bold}" Padding="20,0" CornerRadius="20" TextColor="{Binding BackgroundColor}" FontSize="12" BorderColor="{Binding BackgroundColor}" BorderWidth="2" HeightRequest="40" Text="WISH LIST" HorizontalOptions="Center" />
+                                        <Label TranslationX="{Binding Position}" FontFamily="{StaticResource font_regular}" Margin="0,8,0,0" TextColor="Gray" Text="{Binding Type}" FontSize="10" HorizontalOptions="Center" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </custom:PancakeView>
+                        <Image TranslationX="{Binding Position}" Source="{Binding ImageSrc}" WidthRequest="300" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,-56,152" />
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        </Grid>-->
+
+
+
+
+    <StackLayout IsVisible="False">
+        <ListView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"
+                ItemSelected="OnItemSelected">
+            <d:ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>First Item</x:String>
+                    <x:String>Second Item</x:String>
+                    <x:String>Third Item</x:String>
+                    <x:String>Fourth Item</x:String>
+                    <x:String>Fifth Item</x:String>
+                    <x:String>Sixth Item</x:String>
+                </x:Array>
+            </d:ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Text}" 
+                                d:Text="{Binding .}"
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                            <Label Text="{Binding Description}" 
+                                d:Text="Item descripton"
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
