@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RP_API", "RP_API\RP_API.csproj", "{419C518D-59F7-4133-99B3-47ED6ACB241E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{419C518D-59F7-4133-99B3-47ED6ACB241E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{419C518D-59F7-4133-99B3-47ED6ACB241E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{419C518D-59F7-4133-99B3-47ED6ACB241E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{419C518D-59F7-4133-99B3-47ED6ACB241E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF64C308-EFA4-4FFB-9342-B03A7522180A}
+	EndGlobalSection
+EndGlobal
