@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\reXOn\\source\\repos\\RP_API\\RP_API\\RP_API.csproj": {}
+    "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\RP_API\\RP_API\\RP_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\reXOn\\source\\repos\\RP_API\\RP_API\\RP_API.csproj": {
+    "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\RP_API\\RP_API\\RP_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\reXOn\\source\\repos\\RP_API\\RP_API\\RP_API.csproj",
+        "projectUniqueName": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\RP_API\\RP_API\\RP_API.csproj",
         "projectName": "RP_API",
-        "projectPath": "C:\\Users\\reXOn\\source\\repos\\RP_API\\RP_API\\RP_API.csproj",
+        "projectPath": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\RP_API\\RP_API\\RP_API.csproj",
         "packagesPath": "C:\\Users\\reXOn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\reXOn\\source\\repos\\RP_API\\RP_API\\obj\\",
+        "outputPath": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\RP_API\\RP_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -48,17 +48,17 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer.Design": {
               "target": "Package",
@@ -68,7 +68,15 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
