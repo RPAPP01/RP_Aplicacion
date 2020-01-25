@@ -35,7 +35,7 @@ namespace RP_API.Controllers
             }
             this._context.Perfils.Add(perfil);
             this._context.SaveChanges();
-            return Created($"Perfils/{perfil.PerfilId}", perfil);
+            return Created($"Perfil/{perfil.PerfilId}", perfil);
         }
     }
 }
