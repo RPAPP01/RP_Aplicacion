@@ -1,39 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 using RP_API.Models;
 
 namespace RP_API.Controllers
 {
     [Route("api/v1/[controller]")]
-    public class PerfilController : Controller
+    public class PermisoController : Controller
     {
         private readonly LibraryDbContext _context;
 
-        public PerfilController(LibraryDbContext context)
+        public PermisoController(LibraryDbContext context)
         {
             _context = context;
         }
-
+        //GET
         [HttpGet]
-        public List<Perfil>GetPerfil()
+        public List<Permiso> GetPermiso()
         {
-            return _context.Perfil.ToList();
+            return _context.Permiso.ToList();
 
         }
-
         //Search by ID
         [HttpGet("{id:int}")]
-        public IActionResult GetPerfilById(int id)
+        public IActionResult GetPermisoById(int id)
         {
 
-            var perfil = this._context.Perfil.SingleOrDefault(ct => ct.PerfilId == id);
-            if (perfil != null)
+            var permiso = this._context.Permiso.SingleOrDefault(ct => ct.PermisoId == id);
+            if (permiso != null)
             {
-                return Ok(perfil);
+                return Ok(permiso);
             }
             else
             {
@@ -43,55 +40,53 @@ namespace RP_API.Controllers
         }
         //AddPerfil
         [HttpPost]
-        public IActionResult AddPerfil([FromBody] Perfil perfil)
+        public IActionResult AddPermiso([FromBody] Permiso permiso)
         {
 
             if (!this.ModelState.IsValid)
             {
                 return BadRequest();
             }
-            this._context.Perfil.Add(perfil);
+            this._context.Permiso.Add(permiso);
             this._context.SaveChanges();
-            return Created($"Perfil/{perfil.PerfilId}", perfil);
+            return Created($"Permiso/{permiso.PermisoId}", permiso);
         }
-        //PutPerfil
+        //PutPermiso
         [HttpPut("{id}")]
-        public IActionResult PutPerfil(int id, [FromBody] Perfil perfil)
+        public IActionResult PutPermiso(int id, [FromBody] Permiso permiso)
         {
-            var target = _context.Perfil.FirstOrDefault(ct => ct.PerfilId == id);
+            var target = _context.Permiso.FirstOrDefault(ct => ct.PermisoId == id);
             if (target == null)
             {
                 return NotFound();
             }
             else
             {
-                target.Descripcion = perfil.Descripcion;
-                target.Habilitado = perfil.Habilitado;
-                target.Updated = perfil.Updated;
+                target.Descripcion = permiso.Descripcion;
+                target.Habilitado = permiso.Habilitado;
+                target.Updated = permiso.Updated;
 
-                _context.Perfil.Update(target);
+                _context.Permiso.Update(target);
                 _context.SaveChanges();
                 return Ok();
             }
         }
 
-        //Delete Perfil
+        //Delete Permiso
         [HttpDelete("{id}")]
-        public IActionResult DeletePerfil(int id)
+        public IActionResult DeletePermiso(int id)
         {
-            var target = _context.Perfil.FirstOrDefault(ct => ct.PerfilId == id);
+            var target = _context.Permiso.FirstOrDefault(ct => ct.PermisoId == id);
             if (!this.ModelState.IsValid)
             {
                 return BadRequest();
             }
             else
             {
-                _context.Perfil.Remove(target);
+                _context.Permiso.Remove(target);
                 _context.SaveChanges();
                 return Ok();
             }
         }
-
-
     }
 }

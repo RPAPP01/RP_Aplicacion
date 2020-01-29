@@ -154,3 +154,4 @@ C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\obj\Debug\ne
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\obj\Debug\netcoreapp3.1\RP_API.csproj.CopyComplete
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\obj\Debug\netcoreapp3.1\RP_API.dll
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\obj\Debug\netcoreapp3.1\RP_API.pdb
+C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\obj\Debug\netcoreapp3.1\RP_API.csprojAssemblyReference.cache
