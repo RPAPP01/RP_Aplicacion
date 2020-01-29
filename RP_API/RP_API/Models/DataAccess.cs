@@ -9,7 +9,7 @@ namespace RP_API.Models
         : base(data) { }
         public DbSet<Perfil> Perfil{ get; set; }
         public DbSet<Permiso> Permiso { get; set; }
+        public DbSet<PerfilPermiso> PerfilPermiso { get; set; }
 
-        
     }
 }
