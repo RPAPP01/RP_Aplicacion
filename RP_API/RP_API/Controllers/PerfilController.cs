@@ -24,6 +24,23 @@ namespace RP_API.Controllers
             return _context.Perfil.ToList();
 
         }
+
+        //Search by ID
+        [HttpGet("{id:int}")]
+        public IActionResult GetPerfilById(int id)
+        {
+
+            var perfil = this._context.Perfil.SingleOrDefault(ct => ct.PerfilId == id);
+            if (perfil != null)
+            {
+                return Ok(perfil);
+            }
+            else
+            {
+                return NotFound();
+            }
+
+        }
         //AddPerfil
         [HttpPost]
         public IActionResult AddPerfil([FromBody] Perfil perfil)
@@ -57,8 +74,6 @@ namespace RP_API.Controllers
                 return Ok();
             }
         }
-
-
 
         //Delete Perfil
         [HttpDelete("{id}")]
