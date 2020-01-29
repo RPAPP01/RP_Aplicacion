@@ -54,7 +54,7 @@ namespace RP_API.Controllers
 
                 _context.Perfil.Update(target);
                 _context.SaveChanges();
-                return new NoContentResult();
+                return Ok();
             }
         }
 

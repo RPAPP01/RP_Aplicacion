@@ -145,6 +145,7 @@ C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\bin\Debug\ne
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\obj\Debug\netcoreapp3.1\RP_API.csprojAssemblyReference.cache
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\obj\Debug\netcoreapp3.1\staticwebassets\RP_API.StaticWebAssets.Manifest.cache
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\obj\Debug\netcoreapp3.1\staticwebassets\RP_API.StaticWebAssets.xml
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\RP_API\RP_API\obj\Debug\netcoreapp3.1\RP_API.MvcApplicationPartsAssemblyInfo.cache
