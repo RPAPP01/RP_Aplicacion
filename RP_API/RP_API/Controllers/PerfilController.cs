@@ -8,7 +8,7 @@ using RP_API.Models;
 
 namespace RP_API.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
     public class PerfilController : Controller
     {
         private readonly LibraryDbContext _context;
@@ -24,7 +24,7 @@ namespace RP_API.Controllers
             return _context.Perfil.ToList();
 
         }
-        //AddAuthors
+        //AddPerfil
         [HttpPost]
         public IActionResult AddPerfil([FromBody] Perfil perfil)
         {
@@ -37,5 +37,46 @@ namespace RP_API.Controllers
             this._context.SaveChanges();
             return Created($"Perfil/{perfil.PerfilId}", perfil);
         }
+        //PutPerfil
+        [HttpPut("{id}")]
+        public IActionResult PutPerfil(int id, [FromBody] Perfil perfil)
+        {
+            var target = _context.Perfil.FirstOrDefault(ct => ct.PerfilId == id);
+            if (target == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                target.Descripcion = perfil.Descripcion;
+                target.Habilitado = perfil.Habilitado;
+                target.Updated = perfil.Updated;
+
+                _context.Perfil.Update(target);
+                _context.SaveChanges();
+                return new NoContentResult();
+            }
+        }
+
+
+
+        //Delete Perfil
+        [HttpDelete("{id}")]
+        public IActionResult DeletePerfil(int id)
+        {
+            var target = _context.Perfil.FirstOrDefault(ct => ct.PerfilId == id);
+            if (!this.ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            else
+            {
+                _context.Perfil.Remove(target);
+                _context.SaveChanges();
+                return Ok();
+            }
+        }
+
+
     }
 }
