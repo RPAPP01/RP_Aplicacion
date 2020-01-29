@@ -21,7 +21,7 @@ namespace RP_API.Controllers
         [HttpGet]
         public List<Perfil>Get()
         {
-            return _context.Perfils.ToList();
+            return _context.Perfil.ToList();
 
         }
         //AddAuthors
@@ -33,7 +33,7 @@ namespace RP_API.Controllers
             {
                 return BadRequest();
             }
-            this._context.Perfils.Add(perfil);
+            this._context.Perfil.Add(perfil);
             this._context.SaveChanges();
             return Created($"Perfil/{perfil.PerfilId}", perfil);
         }

@@ -7,6 +7,6 @@ namespace RP_API.Models
     {
         public LibraryDbContext(DbContextOptions<LibraryDbContext> data)
         : base(data) { }
-        public DbSet<Perfil> Perfils{ get; set; }
+        public DbSet<Perfil> Perfil{ get; set; }
     }
 }
