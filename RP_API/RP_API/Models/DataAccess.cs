@@ -10,6 +10,7 @@ namespace RP_API.Models
         public DbSet<Perfil> Perfil{ get; set; }
         public DbSet<Permiso> Permiso { get; set; }
         public DbSet<PerfilPermiso> PerfilPermiso { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
 
     }
 }
