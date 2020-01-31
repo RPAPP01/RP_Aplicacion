@@ -204,4 +204,22 @@
   <ItemGroup>
     <BundleResource Include="Resources\surf.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_accessibility_black_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_local_activity_black_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_local_atm_black_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_local_bar_black_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_local_dining_black_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_my_location_black_18.png" />
+  </ItemGroup>
 </Project>

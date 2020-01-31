@@ -10,7 +10,7 @@
         <StackLayout BackgroundColor="#FFFFFF" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,60,0,60" VerticalOptions="FillAndExpand">
-                    <Image Source="rp.png" VerticalOptions="Center" HeightRequest="64" />
+                    <Image Source="Logo.ico" VerticalOptions="Center" />
                 </ContentView>
             </StackLayout>
         </StackLayout>
