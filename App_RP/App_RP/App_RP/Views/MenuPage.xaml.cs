@@ -20,9 +20,9 @@ namespace App_RP.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Reservaciones" },
-                 new HomeMenuItem {Id= MenuItemType.Maps,Title="Ubicaciones"},
-                 new HomeMenuItem {Id = MenuItemType.Community, Title="Bares" }
+                new HomeMenuItem {Id = MenuItemType.Browse, Title="Reservaciones" ,IconSource="./drawable/baseline_local_atm_black_18.png"},
+                 new HomeMenuItem {Id= MenuItemType.Maps,Title="Ubicaciones",IconSource="./drawable/baseline_my_location_black_18.png"},
+                 new HomeMenuItem {Id = MenuItemType.Community, Title="Bares" ,IconSource="./drawable/baseline_local_bar_black_18.png"}
                // new HomeMenuItem {Id = MenuItemType.About, Title="About" },
                
             };
