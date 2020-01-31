@@ -20,7 +20,7 @@ namespace App_RP.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            System.Threading.Thread.Sleep(1500);
+            System.Threading.Thread.Sleep(1000);
             StartActivity(typeof(MainActivity));
         }
     }

@@ -24,14 +24,6 @@ public class VideoViewSavedState
 	}
 
 
-	public VideoViewSavedState (android.os.Parcel p0, java.lang.ClassLoader p1)
-	{
-		super (p0, p1);
-		if (getClass () == VideoViewSavedState.class)
-			mono.android.TypeManager.Activate ("Octane.Xamarin.Forms.VideoPlayer.Android.Views.View.VideoViewSavedState, Octane.Xamarin.Forms.VideoPlayer.Android", "Android.OS.Parcel, Mono.Android:Java.Lang.ClassLoader, Mono.Android", this, new java.lang.Object[] { p0, p1 });
-	}
-
-
 	public VideoViewSavedState (android.os.Parcelable p0)
 	{
 		super (p0);
