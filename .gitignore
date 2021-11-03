@@ -2,3 +2,13 @@
 RP_Web/.vs/RP_Web/v16/.suo
 RP_Web/.vs/RP_Web/v16/Server/sqlite3/storage.ide
 RP_Web/.vs/RP_Web/v16/Server/sqlite3/storage.ide-wal
+*.pdb
+*.ide-shm
+*.xml
+*.xml
+*.config
+*.exe
+*.rsp
+*.dll
+*.targets
+*.CopyComplete
