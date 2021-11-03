@@ -1,0 +1,197 @@
+﻿@model List<RP_Web.Models.MesaModel>
+@{
+    ViewBag.Title = "Mesas";
+}
+
+<div class="card-footer">
+        <a style="font-size:35px; font-weight:bold"> Mesas </a><button type="submit" class="btn btn-success" onclick="insert()">Agregar </button>
+</div>
+
+
+
+<table id="tablestatu" class="table table-bordered table table-hover active ">
+    <thead>
+        <tr style="background-color:#a2c5f5">
+            <th style="text-align:left;" class="success">ID Mesa</th>
+            <th style="text-align:left;" class="success">Lugar </th>
+            <th style="text-align:left;" class="success">Descripcion</th>
+            <th style="text-align:left;" class="success">Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.MesaId</td>
+                <td>@u.LugarReservaId</td>
+                <td>@u.Descripcion</td>
+
+                <td style="width:200px; text-align:center">
+                    <a title="Editar" data-value="@u.MesaId" onclick="actualizar('@u.MesaId','@u.LugarReservaId','@u.Descripcion')"><i class="fas fa-edit"></i></a>
+                    <!--Html.ActionLink("Editar", "Editar", "Municipio", new { municipio = u.municipio}, null)-->
+                    <!--<a title="Eliminar" onclick="return confirm('¿Esta seguro?');" href="~/estado/index/u.estado"><i class="glyphicon glyphicon-remove"></i></a>-->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="modal fade" id="MesasActualizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Actualizar Mesa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Mesa:</label>
+                        <input type="text" class="form-control" id="M">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-name" class="col-form-label">Lugar:</label>
+                        @*<input type="text" class="form-control" id="LR">*@
+                        <select class="form-control select2" style="width: 100%;" id="LR">
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Descripcion:</label>
+                        <input type="text" class="form-control" id="D">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="btn_actualizar()">Send message</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="MesasInsert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Insert Mesa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Mesa:</label>
+                        <input type="text" class="form-control" id="IM">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-name" class="col-form-label">Lugar:</label>
+                        @*<input type="text" class="form-control" id="LR">*@
+                        <select class="form-control select2" style="width: 100%;" id="ILR">
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Descripcion:</label>
+                        <input type="text" class="form-control" id="ID">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="btn_insert()">Send message</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $('.select2').select2()
+
+    function actualizar(Mesa, Lugar, Descripcion) {
+            //Initialize Select2 Elements
+        setTimeout('select_LugarUp()', 1000);
+        
+        $('#M').val(Mesa);
+        $('#LR').val(Lugar);
+        $('#D').val(Descripcion);
+        $('#MesasActualizar').modal('show');
+    }
+
+    function insert() { 
+        $('#MesasInsert').modal('show'); //Mostrar modal por medio del ID
+
+        setTimeout('select_LugarIn()', 1000);
+    }
+
+    function btn_actualizar() {
+        $('#MesasActualizar').modal('show'); //Mostrar modal por medio del ID
+
+        $.ajax({
+            url: '/Catalogos/MesaUpdate', //Ruta del Controlador
+            type: "POST",
+            data: {
+                Query: 'Update', 
+                IDMesa: $('#M').val(), //traer datos de HTML
+                Lugar: $('#LR').val(),
+                Descripcion: $('#D').val()
+            },
+            success: function (data) {
+                   window.location.reload();
+            }
+        });
+    }
+
+    function btn_insert() {
+
+        $.ajax({
+            url: '/Catalogos/MesaInsert', //Ruta del Controlador
+            type: "POST",
+            data: {
+                Query: 'Insert', 
+                IDMesa: 0, //traer datos de HTML
+                Lugar: $('#ILR').val(),
+                Descripcion: $('#ID').val()
+            },
+            success: function (data) {
+            window.location.reload();
+            }
+        });
+    }
+
+    function select_LugarUp() {
+    $.ajax({
+        url: '/Catalogos/Select_Establecimiento',
+        type: "POST",
+        dataType: "JSON",
+        success: function (data) {
+           console.log(data);
+            $.each(data, function (idx, elm) {
+                var zE = document.createElement("option");
+                zE.setAttribute("value", elm['LugarReservaId']);
+                var tE = document.createTextNode(elm['NombreLugar']);
+                zE.appendChild(tE);
+                document.getElementById("LR").appendChild(zE);
+            });
+        }
+    });
+    }
+
+    function select_LugarIn() {
+    $.ajax({
+        url: '/Catalogos/Select_Establecimiento',
+        type: "POST",
+        dataType: "JSON",
+        success: function (data) {
+           console.log(data);
+            $.each(data, function (idx, elm) {
+                var zE = document.createElement("option");
+                zE.setAttribute("value", elm['LugarReservaId']);
+                var tE = document.createTextNode(elm['NombreLugar']);
+                zE.appendChild(tE);
+                document.getElementById("ILR").appendChild(zE);
+            });
+        }
+    });
+}
+
+</script>

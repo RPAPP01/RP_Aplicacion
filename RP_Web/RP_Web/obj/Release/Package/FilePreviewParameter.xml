@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="rpservice-001-site1" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\reXOn\\source\\repos\\RP_Web\\RP_Web\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\reXOn\\source\\repos\\RP_Web\\RP_Web\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="RPM_DB-Web.config Connection String" description="RPM_DB Connection String used in web.config by the application to access the database." value="Data Source=DESKTOP-D8U23BL;Initial Catalog=RP_Reservations;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\reXOn\\source\\repos\\RP_Web\\RP_Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RPM_DB']/@connectionString" />
+  </parameter>
+</parameters>

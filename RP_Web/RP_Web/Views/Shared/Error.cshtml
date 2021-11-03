@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+
+<body  style="background-color:#2d2d2d;"> <!--Con esta propiedad definimos el color que queremos de fondo-->
+    <hgroup>
+        <h1 style="color:#ffc107; font-size:45px; font-family:'Agency FB'; text-align:center ;">
+        Error
+        </h1>
+
+        <!--Con las siguientes propiedades establecemos: color, tamaño de fuente, tipo de fuente y donde estara alineada-->
+            <h2 style="color: #ffc107; font-size: 35px; font-family: 'Agency FB'; text-align: center;"> 
+                La conexion a la base de datos no funciona. Contacta con el administrador.
+            </h2>
+
+        <h3 style="text-align:center;"> <!--Mandamos la imagen al centro de la pagina-->
+        <img src="~/Images/errorDB.png" width="230"/> <!--Insertamos la ruta de la imagen y con la propiedad "width" definimos su tamaño-->
+        </h3>
+        <h4 style="text-align:center;">
+            <img src="~/Images/RP_Logo.jpeg" width="140"/>
+        </h4>
+            </hgroup>
+    @RenderBody()
+</body>
+</html>

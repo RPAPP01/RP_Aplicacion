@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "registro";
+}
+
+@{
+    // Layout = "~/Views/Shared/_Layout_Login.cshtml"; login_content
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+@*/.login-logo*@
+
+    <div class="card" style="opacity: 0.90">
+
+        <!--Cambia imagen de fondo-->
+
+        <div class="login-logo">
+            <img src="~/Images/RP_Logos.jpg">
+        </div>
+        <div class="card-body login-card-body">
+            <form action="../../index3.html" method="post">
+
+                <!--Campos de texto para registrar usuarios-->
+                <!--Nombre-->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Correo-->
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" id="correo" placeholder="Email">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-envelope"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Mas campos de texto para completar el registro-->
+                <div class="input-group mb-3"> <!--Clae para alinear el icono junto al campo de texto-->
+                    <input type="text" class="form-control" id="celular" placeholder="Numero">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-mobile"></span>
+                        </div>
+                    </div>
+                    </div>
+                    <!--Contraseña-->
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" id="pass" placeholder="Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+
+                                <span class="fas fa-lock" onclick="mostrarContrasena()"></span>
+
+                            </div>
+                        </div>
+                    </div>
+
+            </form>
+
+            <div class="social-auth-links text-center mb-3">
+
+                <a class="btn btn-block btn-primary" style="background-color:#1c1c1b; color:#ffffff" onclick="capturar()">
+                    Registrarse
+                </a>
+            </div>
+
+
+            <!-- /.social-auth-links -->
+
+
+        </div>
+        <!--/.login-card-body -->
+
+
+
+
+        <script src="~/Scripts/Scripts_Views/Reservacion.js">
+        </script>
+
+        <script src="~/Scripts/Scripts_Views/obtenerDatos.js">
+        </script>
+    </div>
