@@ -10,75 +10,39 @@ namespace App_RP.ViewModels
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
-        private string _username;
-        private string _password;
-        private bool _areCredentialsInvalid;
-
-        public LoginViewModel(INavigationService navigationService)
+        public Action DisplayInvalidLoginPrompt;
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+        private string email;
+        public string Email
         {
-            AuthenticateCommand = new Command(() =>
-            {
-                AreCredentialsInvalid = !UserAuthenticated(Username, Password);
-                if (AreCredentialsInvalid) return;
-
-                navigationService.GoBack();
-            });
-
-            AreCredentialsInvalid = false;
-        }
-
-        private bool UserAuthenticated(string username, string password)
-        {
-            if (string.IsNullOrEmpty(username)
-                || string.IsNullOrEmpty(password))
-            {
-                return false;
-            }
-
-            return username.ToLowerInvariant() == "joe"
-                && password.ToLowerInvariant() == "secret";
-        }
-
-        public string Username
-        {
-            get => _username;
+            get { return email; }
             set
             {
-                if (value == _username) return;
-                _username = value;
-                OnPropertyChanged(nameof(Username));
+                email = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Email"));
             }
         }
-
+        private string password;
         public string Password
         {
-            get => _password;
+            get { return password; }
             set
             {
-                if (value == _password) return;
-                _password = value;
-                OnPropertyChanged(nameof(Password));
+                password = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Password"));
             }
         }
-
-        public ICommand AuthenticateCommand { get; set; }
-
-        public bool AreCredentialsInvalid
+        public ICommand SubmitCommand { protected set; get; }
+        public LoginViewModel()
         {
-            get => _areCredentialsInvalid;
-            set
+            SubmitCommand = new Command(OnSubmit);
+        }
+        public void OnSubmit()
+        {
+            if (email != "macoratti@yahoo.com" || password != "secret")
             {
-                if (value == _areCredentialsInvalid) return;
-                _areCredentialsInvalid = value;
-                OnPropertyChanged(nameof(AreCredentialsInvalid));
+                DisplayInvalidLoginPrompt();
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

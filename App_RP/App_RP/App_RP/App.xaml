@@ -14,10 +14,11 @@
                 <styles:Fonts />
             </ResourceDictionary.MergedDictionaries>
             <!--Global Styles-->
-            <Color x:Key="NavigationPrimary">#de0804</Color>
+            <Color x:Key="NavigationPrimary">#1D1D1B</Color>
+            <Color x:Key="TextPrimary">#e3e307</Color>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarTextColor" Value="{StaticResource TextPrimary}"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

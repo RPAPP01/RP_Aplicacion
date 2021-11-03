@@ -6,8 +6,8 @@
              mc:Ignorable="d"
              x:Class="App_RP.Styles.Colors">
     <!-- COLORS -->
-    <Color x:Key="BlackColor">#FE2E2E</Color>
-    <Color x:Key="WhiteColor">#FFFFFF</Color>
-    <Color x:Key="TabBarTextColor">#88ACB9</Color>
-    <Color x:Key="TabBarUnselectedColor">#B2B3B5</Color>
+    <Color x:Key="BlackColor">#f5ce0c</Color>
+    <Color x:Key="WhiteColor">#f5ce0c</Color>
+    <Color x:Key="TabBarTextColor">#f5ce0c</Color>
+    <Color x:Key="TabBarUnselectedColor">#f5ce0c</Color>
 </ResourceDictionary>

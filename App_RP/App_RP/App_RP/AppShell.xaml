@@ -12,11 +12,11 @@
             <Setter Property="Shell.BackgroundColor" 
                     Value="{StaticResource BlackColor}" />
             <Setter Property="Shell.ForegroundColor" 
-                    Value="{StaticResource WhiteColor}" />
+                    Value="{StaticResource BlackColor}" />
             <Setter Property="Shell.TitleColor" 
-                    Value="{StaticResource WhiteColor}" />
+                    Value="{StaticResource BlackColor}" />
             <Setter Property="Shell.TabBarBackgroundColor" 
-                    Value="{StaticResource WhiteColor}" />
+                    Value="{StaticResource BlackColor}" />
             <Setter Property="Shell.TabBarTitleColor" 
                     Value="{StaticResource TabBarTextColor}" />
             <Setter Property="Shell.UnselectedColor" 

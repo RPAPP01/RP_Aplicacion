@@ -101,7 +101,7 @@
     <Grid>
         <!-- BACKGROUND VIDEO -->
         <videoplayer:VideoPlayer
-            AutoPlay="True"
+            AutoPlay="False"
             DisplayControls="False"
             Repeat="True"
             Volume="0"
@@ -188,7 +188,7 @@
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Label
+                <!--<Label
                     Grid.Column="0"
                     Text="ALL"
                     Style="{StaticResource SelectedFilterStyle}"/>
@@ -199,7 +199,7 @@
                 <Label 
                     Grid.Column="2"
                     Text="WOMENS"
-                    Style="{StaticResource FilterStyle}"/>
+                    Style="{StaticResource FilterStyle}"/>-->
             </Grid>
         </Grid>
     </Grid>

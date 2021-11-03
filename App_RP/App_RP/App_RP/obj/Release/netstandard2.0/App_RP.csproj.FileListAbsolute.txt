@@ -41,3 +41,4 @@ C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\R
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Release\netstandard2.0\App_RP.dll
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Release\netstandard2.0\ref\App_RP.dll
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Release\netstandard2.0\App_RP.pdb
+C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Release\netstandard2.0\Views\Login.xaml.g.cs

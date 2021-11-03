@@ -7,10 +7,10 @@
              x:Class="App_RP.Views.MenuPage"
              Title="Menu">
     <StackLayout VerticalOptions="FillAndExpand">
-        <StackLayout BackgroundColor="#FFFFFF" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+        <StackLayout BackgroundColor="#1d1d1b" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,60,0,60" VerticalOptions="FillAndExpand">
-                    <Image Source="Logo.ico" VerticalOptions="Center" HeightRequest="100" />
+                <ContentView Padding="0,0,0,0" VerticalOptions="FillAndExpand">
+                    <Image Source="RP_Logo"  VerticalOptions="FillAndExpand" />
                 </ContentView>
             </StackLayout>
         </StackLayout>

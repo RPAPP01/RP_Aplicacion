@@ -3,7 +3,7 @@
 
   <style name="Theme.Splash"
           parent="android:Theme">
-    <item name="android:windowBackground">@drawable/rp</item>
+    <item name="android:windowBackground">@drawable/RP_Logo</item>
     <item name="android:windowNoTitle">true</item>
   </style>
 

@@ -44,7 +44,6 @@ C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\bin\D
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\bin\Debug\netstandard2.0\App_RP.dll
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\bin\Debug\netstandard2.0\ref\App_RP.dll
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\bin\Debug\netstandard2.0\App_RP.pdb
-C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\App_RP.csprojAssemblyReference.cache
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\Styles\Colors.xaml.g.cs
@@ -53,6 +52,7 @@ C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\D
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\Views\CommunityView.xaml.g.cs
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\Views\Login.xaml.g.cs
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\Views\MapsPage.xaml.g.cs
@@ -64,3 +64,4 @@ C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\D
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\App_RP.dll
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\ref\App_RP.dll
 C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\App_RP.pdb
+C:\Users\reXOn\OneDrive\Escritorio\RP01\RP_Aplicacion\App_RP\App_RP\App_RP\obj\Debug\netstandard2.0\App_RP.csprojAssemblyReference.cache

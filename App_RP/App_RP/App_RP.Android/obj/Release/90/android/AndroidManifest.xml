@@ -21,10 +21,13 @@
   <uses-feature android:name="android.hardware.location" android:required="false" />
   <uses-feature android:name="android.hardware.location.gps" android:required="false" />
   <uses-feature android:name="android.hardware.location.network" android:required="false" />
-  <application android:label="App_RP.Android" android:icon="@drawable/rp" android:name="android.app.Application" android:allowBackup="true">
-    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCplIW-RhxYNi8iC_-MlamYWR1QjUTTJxY" />
+  <application android:label="App_RP.Android" android:icon="@drawable/rp_logo" android:name="android.app.Application" android:allowBackup="true">
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAAZQVU8KXfVWoKSL5iXhrysB406I0aTnI" />
     <!-- <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAB60QQTMKjNPe80S08U69z5v4jYo7rRcY" />-->
-    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/logo" android:label="App_RP" android:theme="@style/MainTheme" android:name="crc64df1cbfad8b79f7bb.MainActivity" />
+    <!-- Necessary for apps that target Android 9.0 or higher -->
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/logrptrasp" android:label="RP_APP" android:theme="@style/MainTheme" android:name="crc64df1cbfad8b79f7bb.MainActivity" />
     <activity android:noHistory="true" android:theme="@style/Theme.Splash" android:name="crc64df1cbfad8b79f7bb.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -34,8 +37,7 @@
     <receiver android:enabled="true" android:exported="false" android:name="crc643f46942d9dd1fff9.PowerSaveModeBroadcastReceiver" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="com.companyname.app_rp.mono.MonoRuntimeProvider.__mono_init__" />
     <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
-    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
   </application>
-   or 
-  <!--localizacion --><!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />--></manifest>
+  or
+  <!-- Necessary for apps that target Android 9.0 or higher --><!--localizacion --><!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />--></manifest>
