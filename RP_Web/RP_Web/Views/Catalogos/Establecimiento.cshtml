@@ -61,8 +61,10 @@
                         <input type="text" class="form-control" id="C">
                     </div>
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Nombre:</label>
-                        <input type="text" class="form-control" id="NL">
+                        <label for="message-name" class="col-form-label">Nombre:</label>
+                        @*<input type="text" class="form-control" id="LR">*@
+                        <select class="form-control select2" style="width: 100%;" id="NL">
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Ubicacion:</label>
@@ -109,14 +111,14 @@
                         <input type="text" class="form-control" id="ALR">
                     </div>
                     <div class="mb-3">
-                        <label for="message-name" class="col-form-label">Clasificacion:</label>
-                        @*<input type="text" class="form-control" id="LR">*@
-                        <select class="form-control select2" style="width: 100%;" id="AC">
-                        </select>
+                        <label for="recipient-name" class="col-form-label">Clasificacion:</label>
+                        <input type="text" class="form-control" id="AC">
                     </div>
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Nombre:</label>
-                        <input type="text" class="form-control" id="ANL">
+                        <label for="message-name" class="col-form-label">Nombre:</label>
+                        @*<input type="text" class="form-control" id="LR">*@
+                        <select class="form-control select2" style="width: 100%;" id="ANL">
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Ubicacion:</label>
@@ -225,23 +227,23 @@
     }
 
     
-    //function select_ClasificacionIn() {
-    //$.ajax({
-    //    url: '/Catalogos/Select_Clasificacion',
-    //    type: "POST",
-    //    dataType: "JSON",
-    //    success: function (data) {
-    //       console.log(data);
-    //        $.each(data, function (idx, elm) {
-    //            var zE = document.createElement("option");
-    //            zE.setAttribute("value", elm['NombreLugar']);
-    //            var tE = document.createTextNode(elm['Descripcion']);
-    //            zE.appendChild(tE);
-    //            document.getElementById("NL").appendChild(zE);
-    //        });
-    //    }
-    //});
-    //}
+    function select_ClasificacionIn() {
+    $.ajax({
+        url: '/Catalogos/Select_Clasificacion',
+        type: "POST",
+        dataType: "JSON",
+        success: function (data) {
+           console.log(data);
+            $.each(data, function (idx, elm) {
+                var zE = document.createElement("option");
+                zE.setAttribute("value", elm['ClasificacionId']);
+                var tE = document.createTextNode(elm['Descripcion']);
+                zE.appendChild(tE);
+                document.getElementById("NL").appendChild(zE);
+            });
+        }
+    });
+    }
 
     function select_ClasificacionUp() {
     $.ajax({
@@ -255,7 +257,7 @@
                 zE.setAttribute("value", elm['ClasificacionId']);
                 var tE = document.createTextNode(elm['Descripcion']);
                 zE.appendChild(tE);
-                document.getElementById("AC").appendChild(zE);
+                document.getElementById("ANL").appendChild(zE);
             });
         }
     });

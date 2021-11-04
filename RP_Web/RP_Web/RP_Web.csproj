@@ -1784,24 +1784,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\1.jpg" />
-    <Content Include="Images\10.jpg" />
-    <Content Include="Images\11.jpg" />
-    <Content Include="Images\12.jpg" />
-    <Content Include="Images\13.jpg" />
-    <Content Include="Images\14.jpg" />
-    <Content Include="Images\15.jpg" />
-    <Content Include="Images\16.jpg" />
-    <Content Include="Images\17.jpg" />
-    <Content Include="Images\18.jpg" />
-    <Content Include="Images\2.jpg" />
-    <Content Include="Images\3.jpg" />
-    <Content Include="Images\4.jpg" />
-    <Content Include="Images\5.jpg" />
-    <Content Include="Images\6.jpg" />
-    <Content Include="Images\7.jpg" />
-    <Content Include="Images\8.jpg" />
-    <Content Include="Images\9.jpg" />
     <Content Include="Images\bar.jpg" />
     <Content Include="Images\errorDB.png" />
     <Content Include="Images\Logo.png" />
@@ -2002,7 +1984,6 @@
     <Content Include="Views\Catalogos\Area.cshtml" />
     <Content Include="Views\Catalogos\Clasificacion.cshtml" />
     <Content Include="Views\Home\IndexQR.cshtml" />
-    <Content Include="Views\Home\Galeria.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -66,7 +66,7 @@ namespace RP_Web.Controllers
 
         //Mandar los datos de la reservacion
         [HttpPost]//Mandar datos tipo json 
-        public ActionResult NuevaReservacion(string nombre,  string personas, string hora, string fecha)
+        public ActionResult NuevaReservacion(string nombre, string personas, string hora, string fecha)
         {
             Configuracion_DB c = new Configuracion_DB();
             return Json(c.NuevaReservacion(nombre, personas, hora, fecha));
