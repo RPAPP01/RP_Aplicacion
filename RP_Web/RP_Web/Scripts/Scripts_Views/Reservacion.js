@@ -1,6 +1,8 @@
 ﻿function reserva() {
+    
 
     var nombre = document.getElementById("nombre").value;
+    var lugar = document.getElementById("lugar").value;
     var personas = document.getElementById("personas").value;
     var hora = document.getElementById("hora").value;
     var fecha = document.getElementById("fecha").value;
@@ -10,6 +12,7 @@
         type: "POST",
         data: {
             nombre: $('#nombre').val(),//traer datos de HTML 
+            //lugar: $('#lugar').val(),//traer datos de HTML 
             personas: $('#personas').val(),//traer datos de HTML 
             hora: $('#hora').val(),
             fecha: $('#fecha').val()
@@ -46,8 +49,12 @@
     });
 
     {
-        alert(nombre + "\n" + personas + "\n" + hora + "\n" + fecha);
+        alert(lugar);
     }
+
+    //{
+    //    alert(nombre + "\n" + lugar + "\n" + personas + "\n" + hora + "\n" + fecha);
+    //}
 
     //$('#timepicker').datetimepicker({
     //    format: 'LT'
@@ -57,7 +64,11 @@
     //$('#reservationdate').datetimepicker({
     //    format: 'L'
     //});
+
 }
+
+
+
         
     
         

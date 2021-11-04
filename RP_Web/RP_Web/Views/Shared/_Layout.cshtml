@@ -178,19 +178,19 @@
                                     </a>
                                 </li>
 
+                                @*<li class="nav-item" id="UMF">
+                                        <a href="~/Home/UtilidadMarginal" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Establecimiento</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="L">
+                                        <a href="~/Reports/Liquidaciones" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Otro</p>
+                                        </a>
+                                    </li>*@
 
-                                <li class="nav-item" id="UMF">
-                                    <a href="~/Home/UtilidadMarginal" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Establecimiento</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item" id="L">
-                                    <a href="~/Reports/Liquidaciones" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Otro</p>
-                                    </a>
-                                </li>
                                 <li class="nav-item" id="LF" style="display:none;">
                                     <a href="~/Reports/Liquidaciones_Sin_Facturar" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
@@ -239,7 +239,7 @@
 
                         <!--Para agregar quitar el display:none-------Galeria de los restaurantes -->
                         <li class="nav-item" id="IEA">
-                            <a href="~/Reports/Inventario_Equipo_Americano" class="nav-link">
+                            <a href="/Home/Galeria" class="nav-link">
                                 <i class="nav-icon far fa-image"></i>
                                 <p>Galeria</p>
                             </a>
@@ -363,7 +363,7 @@
     @*@Scripts.Render("~/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js")*@
 
     <!-- AdminLTE App -->
-    @*<script src="../Dashboards/dist/js/adminlte.min.js"></script>*@
+    <script src="../Dashboards/dist/js/adminlte.min.js"></script>
 
     @Scripts.Render("~/Dashboard/vendors/datatables.net-scroller/js/dataTables.scroller.min.js")
     @Scripts.Render("~/Dashboard/vendors/jszip/dist/jszip.min.js")
