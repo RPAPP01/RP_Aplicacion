@@ -156,6 +156,7 @@ namespace RP_Web.Helper
 
                     //Datos que va guardar la base de datos
                     cmd.Parameters.AddWithValue("@nombre", nombre);
+                    //cmd.Parameters.AddWithValue("@lugar", lugar);
                     cmd.Parameters.AddWithValue("@pers", personas);
                     cmd.Parameters.AddWithValue("@hora", hora);
                     cmd.Parameters.AddWithValue("@fecha", fecha);
@@ -165,7 +166,8 @@ namespace RP_Web.Helper
                     {
                         ret.Add(new Reservacion()
                         {
-                            Nombre_reserva = dr["LugarReservaId"].ToString(),
+                            Nombre_reserva = dr["NombrePersona"].ToString(),
+                            //Lugar = dr["LugarReservaId"].ToString(),
                             Personas = dr["NumPersonas"].ToString(),
                             Hora = dr["HoraReserva"].ToString(),
                             Fecha = dr["FechaReserva"].ToString()
@@ -173,9 +175,9 @@ namespace RP_Web.Helper
                     }
                     conn.Close();
                 }
-                catch (Exception e) //Error
+                catch (Exception e) 
                 {
-                    Console.WriteLine("Error ", e);
+                    Console.WriteLine("Error ", e); //Error
                 }
             }
             return ret;
