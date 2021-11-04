@@ -50,7 +50,6 @@ namespace RP_Web.Models
     public class Reservacion
     {
         public string Nombre_reserva { get; set; }
-        public string Lugar { get; set; }
         public string Personas { get; set; }
         public string Hora { get; set; }
         public string Fecha { get; set; }
