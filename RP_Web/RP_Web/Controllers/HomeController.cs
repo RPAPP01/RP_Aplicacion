@@ -40,6 +40,11 @@ namespace RP_Web.Controllers
             return View();
         }
 
+        public ActionResult Galeria()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
