@@ -54,7 +54,8 @@ namespace RP_Web.Helper
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
-                        v = dr["nombre"].ToString();
+                        v = dr["nombre"].ToString(); 
+
                         Upm.Add(new UsuarioPermisosModel()
                         {
                             Nombre_usuario = dr["Nombre"].ToString(),

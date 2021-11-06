@@ -73,7 +73,7 @@ namespace RP_Web.Controllers
 
         }
 
-        [HttpGet]
+        [HttpGet] //Recuperar Contraseña por correo
         public ActionResult RecuperaCredenciales(String usuario_correo)
         {
             Configuracion_DB c = new Configuracion_DB();
