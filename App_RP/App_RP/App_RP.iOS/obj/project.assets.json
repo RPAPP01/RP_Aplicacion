@@ -1951,11 +1951,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\App_RP\\App_RP\\App_RP.iOS\\App_RP.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\App_RP\\App_RP\\App_RP.iOS\\App_RP.iOS.csproj",
       "projectName": "App_RP.iOS",
-      "projectPath": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\App_RP\\App_RP\\App_RP.iOS\\App_RP.iOS.csproj",
+      "projectPath": "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\App_RP\\App_RP\\App_RP.iOS\\App_RP.iOS.csproj",
       "packagesPath": "C:\\Users\\reXOn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\App_RP\\App_RP\\App_RP.iOS\\obj\\",
+      "outputPath": "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\App_RP\\App_RP\\App_RP.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1976,8 +1976,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj": {
-              "projectPath": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj"
+            "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj": {
+              "projectPath": "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj"
             }
           }
         }

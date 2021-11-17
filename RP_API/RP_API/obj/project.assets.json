@@ -8361,11 +8361,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\RP_API\\RP_API\\RP_API.csproj",
+      "projectUniqueName": "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\RP_API\\RP_API\\RP_API.csproj",
       "projectName": "RP_API",
-      "projectPath": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\RP_API\\RP_API\\RP_API.csproj",
+      "projectPath": "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\RP_API\\RP_API\\RP_API.csproj",
       "packagesPath": "C:\\Users\\reXOn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\RP_API\\RP_API\\obj\\",
+      "outputPath": "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\RP_API\\RP_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -8455,7 +8455,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.120\\RuntimeIdentifierGraph.json"
       }
     }
   }

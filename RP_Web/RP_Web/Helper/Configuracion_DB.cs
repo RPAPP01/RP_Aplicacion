@@ -13,6 +13,7 @@ namespace RP_Web.Helper
     {
         //Conexion a Base Datos;
         string conexionString = ConfigurationManager.ConnectionStrings["RPM_DB"].ConnectionString;
+
         // Metodo para validar Conexion
         public bool conexion()
         {
@@ -34,7 +35,6 @@ namespace RP_Web.Helper
 
             return cn;
         }
-        //
 
         //Login 
         public List<UsuarioPermisosModel> ValidarLogin(string user, string pass)
@@ -296,8 +296,6 @@ namespace RP_Web.Helper
             return ListEsta;
         }
 
-        //------------------------------------------------------------------------------------------------------------------------//
-
         //Mostrar Area
         public List<AreaModel> ListaArea()
         {
@@ -332,6 +330,42 @@ namespace RP_Web.Helper
                 }
             }
             return ListArea;
+        }
+
+        //Mostrar Reservas
+        public List<ReservaModel> ListaReservas()
+        {
+            using (SqlConnection conn = new SqlConnection(conexionString))
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("sp_Reservas", conn); //SP para registrar usuarios
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    //Datos que va guardar la base de datos
+                    //cmd.Parameters.AddWithValue("@name", user);
+                    //cmd.Parameters.AddWithValue("@user", email);
+                    //cmd.Parameters.AddWithValue("@cel", cel);
+                    //cmd.Parameters.AddWithValue("@pass", pass);
+                    conn.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        ListReserva.Add(new ReservaModel()
+                        {
+                            FechaReserva = dr["FechaReserva"].ToString(),
+                            PersonaReserva = dr["PersonaReserva"].ToString(),
+                            Habilitado = dr["Habilitado"].ToString(),
+                        });
+                    }
+                    conn.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error ", e);
+                }
+            }
+            return ListReserva;
         }
 
         //------------------------------------------------------------------------------------------------------------------------//

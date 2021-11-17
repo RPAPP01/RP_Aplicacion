@@ -110,8 +110,8 @@
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font librar y  menu-open-->
+                        <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font librar y  menu-open-->
+
                         <li class="nav-item has-treeview menu-open" id="dash" style="display:none;">
                             <a href="Home/Index" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -177,37 +177,49 @@
                                         <p>Catalogos</p>
                                     </a>
                                 </li>
-
-                                @*<li class="nav-item" id="UMF">
-                                        <a href="~/Home/UtilidadMarginal" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Establecimiento</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item" id="L">
-                                        <a href="~/Reports/Liquidaciones" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Otro</p>
-                                        </a>
-                                    </li>*@
-
-                                <li class="nav-item" id="LF" style="display:none;">
-                                    <a href="~/Reports/Liquidaciones_Sin_Facturar" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Liquidaciones Sin Facturar</p>
-                                    </a>
-                                </li>
-
-
-                                <li class="nav-item" id="SU" style="display:none;">
-                                    <a href="~/Reports/Seguimiento_Unidades" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Seguimiento Unidades</p>
-                                    </a>
-                                </li>
-
                             </ul>
+
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item" id="UM">
+                                    <a href="~/Catalogos/Reservas" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Reservas</p>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </li>
+
+
+                        @*<li class="nav-item" id="UMF">
+            <a href="~/Home/UtilidadMarginal" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Establecimiento</p>
+            </a>
+        </li>
+        <li class="nav-item" id="L">
+            <a href="~/Reports/Liquidaciones" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Otro</p>
+            </a>
+        </li>*@
+
+                        @*<li class="nav-item" id="LF" style="display:none;">
+            <a href="~/Reports/Liquidaciones_Sin_Facturar" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Liquidaciones Sin Facturar</p>
+            </a>
+        </li>
+
+
+        <li class="nav-item" id="SU" style="display:none;">
+            <a href="~/Reports/Seguimiento_Unidades" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Seguimiento Unidades</p>
+            </a>
+        </li>*@
+
+
 
                         <li class="nav-item has-treeview" id="her" style="display:none;">
                             <a href="#" class="nav-link active">

@@ -15,10 +15,17 @@ namespace RP_Web.Controllers
         {
             return View();
         }
+
+        public ActionResult Reservas()
+        {
+            return View(c.ListaReservas());
+        }
+
         public ActionResult Mesas()
         {
             return View(c.ListaMesas());
         }
+
         [HttpPost]//Mandar datos tipo json 
         public ActionResult MesaUpdate(string Query,int IDMesa,string Lugar,string Descripcion) 
         {
@@ -76,6 +83,8 @@ namespace RP_Web.Controllers
         {
             return View(c.ListaEstablecimiento());
         }
+
+
 
         [HttpPost]
         public ActionResult Select_Establecimiento()

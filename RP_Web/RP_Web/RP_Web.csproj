@@ -138,6 +138,7 @@
     <Compile Include="Models\EstablecimientoModel.cs" />
     <Compile Include="Models\ListaModel.cs" />
     <Compile Include="Models\MesaModel.cs" />
+    <Compile Include="Models\Reservas.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -2003,6 +2004,7 @@
     <Content Include="Views\Catalogos\Clasificacion.cshtml" />
     <Content Include="Views\Home\IndexQR.cshtml" />
     <Content Include="Views\Home\Galeria.cshtml" />
+    <Content Include="Views\Catalogos\Reservas.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

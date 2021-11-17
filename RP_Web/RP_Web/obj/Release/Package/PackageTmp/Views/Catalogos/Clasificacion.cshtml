@@ -1,0 +1,187 @@
+﻿@model List<RP_Web.Models.ClasModel>
+@{
+    ViewBag.Title = "Clasificacion";
+}
+
+<div class="card-footer">
+    <a style="font-size:35px; font-weight:bold"> Clasificacion </a><button type="submit" class="btn btn-success" onclick="insertar()">Agregar </button>
+</div>
+
+<table id="tablestatu" class="table table-bordered table table-hover active ">
+    <thead>
+        <tr style="background-color:#ff7a7a">
+            <th style="text-align:left;" class="success">ID Clasificacion</th>
+            <th style="text-align:left;" class="success">Descripcion</th>
+            <th style="text-align:left;" class="success">Habilitado </th>
+            <th style="text-align:left;" class="success">Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.ClasificacionId</td>
+                <td>@u.Descripcion</td>
+                <td>@u.Habilitado</td>
+
+                <td style="width:200px; text-align:center">
+                    <a title="Editar" data-value="@u.ClasificacionId" onclick="actualizar('@u.ClasificacionId','@u.Descripcion','@u.Habilitado')"><i class="fas fa-edit"></i></a>
+                    <!--Html.ActionLink("Editar", "Editar", "Municipio", new { municipio = u.municipio}, null)-->
+                    <!--<a title="Eliminar" onclick="return confirm('¿Esta seguro?');" href="~/estado/index/u.estado"><i class="glyphicon glyphicon-remove"></i></a>-->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<!--Insertar datos en clsificacion-->
+<div class="modal fade" id="ClasificacionInsertar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Insertar Clasificacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    @*<div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Clasificacion:</label>
+                        <input type="text" class="form-control" id="C">
+                    </div>*@
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Descripcion:</label>
+                        <input type="text" class="form-control" id="D">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Habilitado:</label>
+                        <!--<input type="text" class="form-control" id="H">-->
+                        <select class="form-control select2" style="width: 100%;" id="H">
+                            <option value="1">Si</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="btn_insert()">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Actualizar datos en clasificacion-->
+<div class="modal fade" id="ClasificacionActualizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Actualizar Clasificacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Clasificacion:</label>
+                        <input type="text" class="form-control" id="AC">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Descripcion:</label>
+                        <input type="text" class="form-control" id="AD">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Habilitado:</label>
+                        @*<input type="text" class="form-control" id="AH">*@
+                       <select class="form-control select2" style="width: 100%;" id="AH">
+                            <option value="SI">SI</option>
+                            <option value="NO">NO</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="btn_actualizar()">Actualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $('.select2').select2()
+    function actualizar(Clasificacion, Descripcion, Habilitado) {
+
+        $('#AC').val(Clasificacion);
+        $('#AD').val(Descripcion);
+        $('#AH').val(Habilitado);
+
+        $('#ClasificacionActualizar').modal('show');
+    }
+
+        function insertar() {
+        $('#ClasificacionInsertar').modal('show');
+    }
+
+    //Insertar datos
+    function btn_insert() {
+         
+            $.ajax({
+            url: '/Catalogos/ClasificacionInsert', //Ruta del Controlador
+            type: "POST",
+            data: {
+                Query: 'Insert', 
+                ClasificacionId: 0,
+                Descripcion: $('#D').val(),
+                Habilitado: $('#H').val(),
+            },
+            success: function (data) {
+                 window.location.reload();
+            }
+        });
+
+    }
+
+    function btn_actualizar() {
+        
+        var dato = document.getElementById("AH").value;
+        if (dato.selectedIndex == "SI") dato.value = 1; 
+
+        alert(dato);
+
+            $.ajax({
+                url: '/Catalogos/ClasificacionUpdate', //Ruta del Controlador
+                type: "POST",
+                data: {
+                    Query: 'Update',
+                    ClasificacionId: $('#AC').val(),
+                    Descripcion: $('#AD').val(),
+                    Habilitado: dato
+                },
+                success: function (data) {
+                    window.location.reload();
+                }
+            });
+
+        
+    }
+
+    function select_ClasificacionIn() {
+    $.ajax({
+        url: '/Catalogos/Select_Clasificacion',
+        type: "POST",
+        dataType: "JSON",
+        success: function (data) {
+           console.log(data);
+            $.each(data, function (idx, elm) {
+                var zE = document.createElement("option");
+                zE.setAttribute("value", elm['LugarReservaId']);
+                var tE = document.createTextNode(elm['NombreLugar']);
+                zE.appendChild(tE);
+                document.getElementById("ILR").appendChild(zE);
+            });
+        }
+    });
+}
+
+</script>

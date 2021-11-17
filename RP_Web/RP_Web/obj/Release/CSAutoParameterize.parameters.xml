@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="RPM_DB-Web.config Connection String" description="RPM_DB Connection String used in web.config by the application to access the database." defaultValue="Data Source=SQL5074.site4now.net;Initial Catalog=db_a7ae10_devrpr;User Id=db_a7ae10_devrpr_admin;Password=Skate19r" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\reXOn\\source\\repos\\RP_Web\\RP_Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RPM_DB']/@connectionString" />
+  <parameter name="RPM_DB-Web.config Connection String" description="RPM_DB Connection String used in web.config by the application to access the database." defaultValue="Data Source=DESKTOP-D8U23BL;Initial Catalog=RP_Reservations;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\RP_Web\\RP_Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RPM_DB']/@connectionString" />
   </parameter>
 </parameters>

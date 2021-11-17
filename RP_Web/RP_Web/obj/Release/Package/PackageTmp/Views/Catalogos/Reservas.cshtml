@@ -1,0 +1,35 @@
+﻿@model List<RP_Web.Models.ReservaModel>
+@{
+    ViewBag.Title = "Reservas";
+}
+
+@*<div class="card-footer">
+        <a style="font-size:35px; font-weight:bold"> Area </a><button type="submit" class="btn btn-success" onclick="insertar()">Agregar </button>
+    </div>*@
+
+<table id="tablestatu" class="table table-bordered table table-hover active ">
+    <thead>
+        <tr style="background-color:#fff69f">
+            <th style="text-align:left;" class="success">Nombre</th>
+            <th style="text-align: left;" class="success">Fecha</th>
+            <th style="text-align:left;" class="success">Habilitado </th>
+            <th style="text-align:left;" class="success">Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.PersonaReserva</td>
+                <td>@u.FechaReserva</td>
+                <td>@u.Habilitado</td>
+
+                <td style="width:200px; text-align:center">
+                    <a title="Editar" data-value="@u.PersonaReserva" onclick="actualizar('@u.PersonaReserva','@u.FechaReserva','@u.Habilitado')"><i class="fas fa-edit"></i></a>
+                    @*Html.ActionLink("Editar", "Editar", "Municipio", new { municipio = u.municipio}, null)
+                        <a title="Eliminar" onclick="return confirm('¿Esta seguro?');" href="~/estado/index/u.estado"><i class="glyphicon glyphicon-remove"></i></a>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

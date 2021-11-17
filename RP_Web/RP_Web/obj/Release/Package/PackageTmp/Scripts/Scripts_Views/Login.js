@@ -29,15 +29,15 @@
                         sessionStorage.setItem('user', nombre);
                         sessionStorage.setItem('responsable', email);
                         sessionStorage.setItem('roll', roll);
-                       window.location.assign("http://devrpr-001-site1.itempurl.com/Home/Index")
+                     // window.location.assign("http://devrpr-001-site1.itempurl.com/Home/Index")
 
-                       // window.location.assign("https://localhost:44370/Home/Index")
+                        window.location.assign("https://localhost:44370/Home/Index")
 
 
                     } else {
                         //Si las credenciales son incorrectas tendremos un mensaje de error
-                        window.location.assign("http://devrpr-001-site1.itempurl.com/Login/IndexError")
-                       //window.location.assign("https://localhost:44370/Login/IndexError")
+                       // window.location.assign("http://devrpr-001-site1.itempurl.com/Login/IndexError")
+                       window.location.assign("https://localhost:44370/Login/IndexError")
 
                         $('#msg_error').text('Error verifica tus credenciales')
                         $('#user').css({ 'box-shadow': ' 0 1px 0 #dc3545, 0 -2px 5px rgba(0,0,0,0.08) inset' });
@@ -64,6 +64,7 @@
         $('#user').css({ 'box-shadow': ' 0 1px 0 #dc3545, 0 -2px 5px rgba(0,0,0,0.08) inset' });
         $('#pass').css({ 'box-shadow': ' 0 1px 0 #dc3545, 0 -2px 5px rgba(0,0,0,0.08) inset' });
     }
+
 }
 
 function limpiar_login()
@@ -135,8 +136,8 @@ function mostrarContrasena() {
 
     //funcion para registrar usuarios
     function registrarse() {
-     // window.location.assign("https://localhost:44370/Login/registro");
-        window.location.assign("http://devrpr-001-site1.itempurl.com/Login/registro");
+      window.location.assign("https://localhost:44370/Login/registro");
+      //  window.location.assign("http://devrpr-001-site1.itempurl.com/Login/registro");
 
 }
 

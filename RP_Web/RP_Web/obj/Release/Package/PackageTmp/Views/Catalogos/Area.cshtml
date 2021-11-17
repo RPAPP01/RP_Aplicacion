@@ -1,0 +1,188 @@
+﻿@model List<RP_Web.Models.AreaModel>
+@{
+    ViewBag.Title = "Area";
+}
+
+<div class="card-footer">
+    <a style="font-size:35px; font-weight:bold"> Area </a><button type="submit" class="btn btn-success" onclick="insertar()">Agregar </button>
+</div>
+
+<table id="tablestatu" class="table table-bordered table table-hover active ">
+    <thead>
+        <tr style="background-color:#fff69f">
+            <th style="text-align:left;" class="success">ID Area</th>
+            <th style="text-align: left;" class="success">Descripcion</th>
+            <th style="text-align:left;" class="success">Habilitado </th>
+            <th style="text-align:left;" class="success">Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.AreaId</td>
+                <td>@u.Descripcion</td>
+                <td>@u.Habilitado</td>
+
+                <td style="width:200px; text-align:center">
+                    <a title="Editar" data-value="@u.AreaId" onclick="actualizar('@u.AreaId','@u.Descripcion','@u.Habilitado')"><i class="fas fa-edit"></i></a>
+                    @*Html.ActionLink("Editar", "Editar", "Municipio", new { municipio = u.municipio}, null)
+                    <a title="Eliminar" onclick="return confirm('¿Esta seguro?');" href="~/estado/index/u.estado"><i class="glyphicon glyphicon-remove"></i></a>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!--Modal para Actulizar-->
+<div class="modal fade" id="AreaModalActualizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Actualizar Area</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Area:</label>
+                        <input type="text" class="form-control" id="AA">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Descripcion:</label>
+                        <input type="text" class="form-control" id="AD">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Habilitado:</label>
+                        @*<input type="text" class="form-control" id="AH">*@
+                        <select class="form-control select2" style="width: 100%;" id="AH">
+                            <option value="1">SI</option>
+                            <option value="0">NO</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="btn_actualizar()">Actualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal para Insertar-->
+<div class="modal fade" id="AreaModalInsertar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Insertar Datos en Area</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Area:</label>
+                        <input type="text" class="form-control" id="A">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Habilitado:</label>
+                        <input type="text" class="form-control" id="D">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Habilitado:</label>
+                        @*<input type="text" class="form-control" id="AH">*@
+                        <select class="form-control select2" style="width: 100%;" id="H">
+                            <option >SI</option>
+                            <option >NO</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="btn_insert()">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //$('.select2').select2()
+    function actualizar(Area, Descripcion, Habilitado) {
+
+        $('#AA').val(Area);
+        $('#AD').val(Descripcion);
+        $('#AH').val(Habilitado);
+
+         $('#AreaModalActualizar').modal('show');
+    }
+
+    function btn_actualizar() {
+
+        var dato = document.getElementById("AH").value; //Igualar la opcion a 1 si se elige la opcion *SI*
+        if (dato.selectedIndex == "SI") tt.value = 1; 
+
+
+        $.ajax({
+            url: '/Catalogos/AreaUpdate', //Ruta del Controlador
+            type: "POST",
+            data: {
+                Query: 'Update', 
+                AreaID: $('#AA').val(),
+                Descripcion: $('#AD').val(),
+                Habilitado: $('#AH').val(),
+            },
+            success: function (data) {
+                 window.location.reload();
+            }
+        });
+
+    }
+
+    function insertar() {
+        setTimeout('select_AreaIn()', 1000);
+        $('#AreaModalInsertar').modal('show');
+       
+    }
+
+    function btn_insert() {
+
+        var dato = document.getElementById("H").value; //Igualar la opcion a 1 si se elige la opcion *SI*
+        if (dato.selectedIndex == "SI") tt.value = 1; 
+
+            $.ajax({
+            url: '/Catalogos/AreaInsert', //Ruta del Controlador
+            type: "POST",
+            data: {
+                Query: 'Insert', 
+                AreaID: $('#A').val(),
+                Descripcion: $('#D').val(),
+                Habilitado: $('#H').val(),
+            },
+            success: function (data) {
+                 window.location.reload();
+            }
+        });
+
+    }
+
+//    function select_AreaIn() {
+//    $.ajax({
+//        url: '/Catalogos/Select_Area',
+//        type: "POST",
+//        dataType: "JSON",
+//        success: function (data) {
+//           console.log(data);
+//            $.each(data, function (idx, elm) {
+//                var tE = document.createElement("option");
+//                zE.setAttribute("value", elm['LugardeReservaId']);
+//                var tE = document.createTextNode(elm['Descripcion']);
+//                zE.appendChild(tE);
+//                document.getElementById("D").appendChild(zE);
+//            });
+//        }
+//    });
+//}
+
+</script>
+

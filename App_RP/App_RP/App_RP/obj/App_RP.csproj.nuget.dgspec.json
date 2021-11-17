@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj": {}
+    "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj": {
+    "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj",
+        "projectUniqueName": "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj",
         "projectName": "App_RP",
-        "projectPath": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj",
+        "projectPath": "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\App_RP.csproj",
         "packagesPath": "C:\\Users\\reXOn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\reXOn\\OneDrive\\Escritorio\\RP01\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\obj\\",
+        "outputPath": "C:\\Users\\reXOn\\OneDrive\\Documents\\GitHub\\RP_Aplicacion\\App_RP\\App_RP\\App_RP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
