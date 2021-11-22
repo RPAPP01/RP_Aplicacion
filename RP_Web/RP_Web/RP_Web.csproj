@@ -1975,7 +1975,7 @@
     <Content Include="Scripts\Scripts_Views\CerrarSesion.js" />
     <Content Include="Scripts\Scripts_Views\Login.js" />
     <Content Include="Scripts\Scripts_Views\obtenerDatos.js" />
-    <Content Include="Scripts\Scripts_Views\Reservacion.js" />
+    <Content Include="Scripts\Scripts_Views\reserva.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

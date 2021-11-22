@@ -122,7 +122,6 @@
         var dato = document.getElementById("AH").value; //Igualar la opcion a 1 si se elige la opcion *SI*
         if (dato.selectedIndex == "SI") tt.value = 1; 
 
-
         $.ajax({
             url: '/Catalogos/AreaUpdate', //Ruta del Controlador
             type: "POST",
@@ -133,10 +132,12 @@
                 Habilitado: $('#AH').val(),
             },
             success: function (data) {
-                 window.location.reload();
+                window.location.reload();
+         
+                
             }
         });
-
+        
     }
 
     function insertar() {
@@ -160,11 +161,12 @@
                 Habilitado: $('#H').val(),
             },
             success: function (data) {
-                 window.location.reload();
+            window.location.reload();
             }
         });
 
     }
+
 
 //    function select_AreaIn() {
 //    $.ajax({

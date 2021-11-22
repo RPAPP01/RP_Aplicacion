@@ -21,6 +21,11 @@ namespace RP_Web.Controllers
             return View(c.ListaReservas());
         }
 
+        public ActionResult ReservasDatos()
+        {
+            return Json(c.ListaReservas());
+        }
+
         public ActionResult Mesas()
         {
             return View(c.ListaMesas());
