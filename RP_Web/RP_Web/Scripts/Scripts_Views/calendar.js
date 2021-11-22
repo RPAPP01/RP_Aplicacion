@@ -1,5 +1,5 @@
 ﻿
-setTimeout('cal()', 5000);
+setTimeout('cal()', 3000);
 
 function cal() {
     var Fecha = '';
@@ -9,11 +9,6 @@ function cal() {
         url: '/Catalogos/ReservasDatos', //Ruta del Controlador
         type: "POST",
         data: {
-            //FechaReserva: $('.FechaReserva').val(),
-            //PersonaReserva: $('.PersonaReserva').val(),
-            //Habilitado: $('.Habilitado').val(),
-            
- 
         },
         success: function (data) {
             $.each(data, function (key, value) {
@@ -33,10 +28,11 @@ function cal() {
             /* initialize the calendar
              -----------------------------------------------------------------*/
             //Date for the calendar events (dummy data)
-            alert(Fecha)
+            //alert(Fecha) //Fecha del dia
+
             var date = new Date(Fecha)
             //date)
-            alert(date.getDate())
+            //alert(date.getDate()) //Traer fechas de la ultima reservacion
             var d = date.getDate(),
                 m = date.getMonth(),
                 y = date.getFullYear()
