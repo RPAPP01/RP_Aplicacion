@@ -1,10 +1,9 @@
-﻿
-setTimeout('cal()', 3000);
+﻿setTimeout('cal()', 3000);
 
 function cal() {
     var Fecha = '';
     const FechasIM = [];
-  
+
     $.ajax({
         url: '/Catalogos/ReservasDatos', //Ruta del Controlador
         type: "POST",
@@ -12,15 +11,15 @@ function cal() {
         },
         success: function (data) {
             $.each(data, function (key, value) {
-               Fecha = value['FechaReserva'];
+                Fecha = value['FechaReserva'];
                 email = value['PersonaReserva'];
                 roll = value['Habilitado'];
                 var date = new Date(value['FechaReserva'])
                 var d = date.getDate(),
                     m = date.getMonth(),
                     y = date.getFullYear()
-                FechasIM.push({ title: email, start: new Date(y,m,d),backgroundColor: '#f56954',borderColor: '#f56954',allDay: true });
-               // alert(Fecha);
+                FechasIM.push({ title: email, start: new Date(y, m, d), backgroundColor: '#079d3a', allDay: true });
+                // alert(Fecha);
             })
             console.log(FechasIM)
             ini_events($('#external-events div.external-event'))
@@ -59,7 +58,7 @@ function cal() {
                 }
             });
 
-           // alert(y)
+            // alert(y)
             var calendar = new Calendar(calendarEl, {
                 headerToolbar: {
                     left: 'prev,next today',
@@ -121,9 +120,7 @@ function cal() {
                 $('#new-event').val('')
             })
 
-
-
-        }                 
+        }
     });
 
 
@@ -151,5 +148,5 @@ function cal() {
         })
     }
 
-    
+
 }

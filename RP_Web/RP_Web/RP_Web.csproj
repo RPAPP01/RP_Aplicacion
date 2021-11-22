@@ -1971,10 +1971,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\Scripts_Views\calendar.js" />
     <Content Include="Scripts\Scripts_Views\CerrarSesion.js" />
     <Content Include="Scripts\Scripts_Views\Login.js" />
     <Content Include="Scripts\Scripts_Views\obtenerDatos.js" />
+    <Content Include="Scripts\Scripts_Views\calendario.js" />
     <Content Include="Scripts\Scripts_Views\reserva.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
