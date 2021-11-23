@@ -9,6 +9,8 @@ namespace RP_Web.Models
     {
         public string FechaReserva { get; set; }
         public string PersonaReserva { get; set; }
+        public string HoraReserva { get; set; }
+        public string NumPersonas { get; set; }
         public string Habilitado { get; set; }
     }
 }

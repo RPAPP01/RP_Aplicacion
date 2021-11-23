@@ -12,8 +12,10 @@
 <table id="tablestatu" class="table table-bordered table table-hover active ">
     <thead>
         <tr style="background-color:#a2c5f5">
-            <th style="text-align:left;" class="success">Fecha de Reservacion</th>
             <th style="text-align:left;" class="success">Personas que Reserva</th>
+            <th style="text-align:left;" class="success">Numero de Personas</th>
+            <th style="text-align:left;" class="success">Fecha de la Reservacion</th>
+            <th style="text-align:left;" class="success">Hora de la Reservacion</th>
             <th style="text-align:left;" class="success">Habilitado</th>
             <th style="text-align:left;" class="success">Editar</th>
         </tr>
@@ -23,17 +25,19 @@
         @foreach (var u in Model)
 
         {
-            <tr>
-                <td id="1">@u.FechaReserva</td>
-                <td id="2">@u.PersonaReserva</td>
-                <td id="3">@u.Habilitado</td>
+        <tr>
+            <td id="2">@u.PersonaReserva</td>
+            <td id="2">@u.NumPersonas</td>
+            <td id="1">@u.FechaReserva</td>
+            <td id="2">@u.HoraReserva</td>
+            <td id="3">@u.Habilitado</td>
 
-                <td style="width:200px; text-align:center">
-                    <a title="Editar" data-value="@u.FechaReserva" onclick="@u.FechaReserva@u.PersonaReserva@u.Habilitado"><i class="fas fa-edit"></i></a>
-                    <!--Html.ActionLink("Editar", "Editar", "Municipio", new { municipio = u.municipio}, null)-->
-                    <!--<a title="Eliminar" onclick="return confirm('¿Esta seguro?');" href="~/estado/index/u.estado"><i class="glyphicon glyphicon-remove"></i></a>-->
-                </td>
-            </tr>
+            <td style="width:200px; text-align:center">
+                <a title="Editar" data-value="@u.FechaReserva" onclick="@u.FechaReserva@u.PersonaReserva@u.Habilitado"><i class="fas fa-edit"></i></a>
+                <!--Html.ActionLink("Editar", "Editar", "Municipio", new { municipio = u.municipio}, null)-->
+                <!--<a title="Eliminar" onclick="return confirm('¿Esta seguro?');" href="~/estado/index/u.estado"><i class="glyphicon glyphicon-remove"></i></a>-->
+            </td>
+        </tr>
         }
 
     </tbody>

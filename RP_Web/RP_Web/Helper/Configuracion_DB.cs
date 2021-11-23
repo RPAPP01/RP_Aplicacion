@@ -355,6 +355,8 @@ namespace RP_Web.Helper
                         {
                             FechaReserva = dr["FechaReserva"].ToString(),
                             PersonaReserva = dr["PersonaReserva"].ToString(),
+                            HoraReserva = dr["HoraReserva"].ToString(),
+                            NumPersonas = dr["NumPersonas"].ToString(),
                             Habilitado = dr["Habilitado"].ToString()
                         });
                     }

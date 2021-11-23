@@ -1,9 +1,8 @@
 ﻿
-<!DOCTYPE html>
 <html lang="en">
 <body class="hold-transition sidebar-mini">
     <!-- Main content -->
-    <section class="content" >
+    <section class="content-header" >
         <div class="container-fluid">
             <div class="row">
                 <!-- left column -->
@@ -40,14 +39,14 @@
                             </div>
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-success" onclick="prueba()">Reservar </button>
+                                <button type="submit" class="btn btn-primary" onclick="prueba()">Reservar </button>
                             </div>
 
                         </form>
                     </div>
 
                     <!-- Horizontal Form -->
-                    <div class="card card-info">
+                   <div class="card card-info">
                         <div class="card-header">
                             <h3 class="card-title">Horizontal Form</h3>
                         </div>
@@ -88,22 +87,28 @@
 
                 <!-- right column -->
                 <div class="col-md-6">
-                    <!-- Form Element sizes -->
-                    <div class="card card-success">
+                    <div class="card card-red">
                         <div class="card-header">
-                            <h3 class="card-title">Different Height</h3>
+                            <h3 class="card-gra">Cancelar Reservacion</h3>
                         </div>
-                        <div class="card-body">
-                            <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
-                            <br>
-                            <input class="form-control" type="text" placeholder="Default input">
-                            <br>
-                            <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
-                        </div>
-                        <!-- /.card-body -->
+                        <form>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nombre de la Persona que Reserva</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Fecha del Dia que se Realizo la Reservacion</label>
+                                    <input type="date" class="form-control" id="fecha" placeholder="">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-danger" onclick="prueba()">Cancelar </button>
+                            </div>
+                        </form>
                     </div>
-
                 </div>
+
                 <!--/.col (right) -->
             </div>
             <!-- /.row -->

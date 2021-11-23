@@ -29,7 +29,6 @@ namespace RP_Web.Controllers
             return View();
         }
 
-        
         public ActionResult calendar()
         {
             return View();
@@ -59,8 +58,5 @@ namespace RP_Web.Controllers
             return View();
         }
 
-
     }
-
-
 }

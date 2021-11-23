@@ -108,7 +108,7 @@ function cal() {
                 event.css({
                     'background-color': currColor,
                     'border-color': currColor,
-                    'color': '#fff'
+                    'color': '#bceaf1'
                 }).addClass('external-event')
                 event.text(val)
                 $('#external-events').prepend(event)

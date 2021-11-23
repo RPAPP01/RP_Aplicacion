@@ -89,8 +89,6 @@ namespace RP_Web.Controllers
             return View(c.ListaEstablecimiento());
         }
 
-
-
         [HttpPost]
         public ActionResult Select_Establecimiento()
         {

@@ -25,12 +25,10 @@ namespace RP_Web.Controllers
             }
         }
 
-
         public ActionResult registro()
         {
             return View();
         }
-
 
         //Index mensaje de credenciales incorrectas
         public ActionResult IndexError()
@@ -46,7 +44,6 @@ namespace RP_Web.Controllers
                 return RedirectToAction("Error");
             }
         }
-
 
         [HttpPost]//Mandar datos tipo json 
         public ActionResult ValidaLogin(string user, string pass)
